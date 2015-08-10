@@ -11,11 +11,6 @@ class Parcels
     volume
   end
 
-  # cost_per_pound = {(1..5)=>5, (6..10)=>4, (11..15)=>3, (16..20)=>2}
-  # volume_weight = @length.*(@width).*(@height)./166
-
-
-
   define_method(:cost_to_ship) do
     cost_per_pound = {(1..5)=>5, (6..10)=>4, (11..15)=>3, (16..20)=>2}
     volume_weight = @length.*(@width).*(@height)./166
