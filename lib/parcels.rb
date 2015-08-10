@@ -16,11 +16,12 @@ class Parcels
   define_method(:cost_to_ship) do
     if (1..5).include?(@weight)
       cost_per_pound.fetch(1..5)
-    elsif
-      (6..10).include?(@weight)
-      small_parcel_cost = cost_per_pound.fetch(6..10)
-      small_parcel_total = small_parcel_cost.*(@weight)
-      small_parcel_total
+    elsif (6..10).include?(@weight)
+      small_parcel_cost = cost_per_pound.fetch(6..10).*(@weight)
+      small_parcel_cost
+    elsif (11..15).include?(@weight)
+      medium_parcel_cost = cost_per_pound.fetch(11..15).*(@weight)
+      medium_parcel_cost
     end
   end
 
