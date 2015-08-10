@@ -13,7 +13,7 @@ class Parcels
 
   define_method(:cost_to_ship) do
     cost_per_pound = {(1..5)=>5, (6..10)=>4, (11..15)=>3, (16..20)=>2}
-    volume_weight = @length.*(@width).*(@height)./166
+    volume_weight = self.volume()./166
 
     if volume_weight.>(@weight)
       if (1..5).include?(volume_weight)
@@ -45,6 +45,11 @@ class Parcels
         large_parcel_cost
       end
     end
+  end
+
+  define_method(:next_day_delivery) do
+    next_day = self.cost_to_ship().*(1.5)
+    next_day
   end
 
 end

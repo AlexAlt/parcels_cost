@@ -33,6 +33,13 @@ describe('Parcels') do
       test_parcel = Parcels.new(10, 10, 20, 10)
       expect(test_parcel.cost_to_ship()).to(eq(36))
     end
-
   end
+
+  describe('#delivery') do
+    it('adds a surcharge for next day delivery') do
+      test_parcel = Parcels.new(2, 3, 4, 5)
+      expect(test_parcel.next_day_delivery()).to(eq(7.5))
+    end
+  end
+
 end
