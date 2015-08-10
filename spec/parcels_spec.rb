@@ -25,5 +25,14 @@ describe('Parcels') do
       expect(test_parcel.cost_to_ship()).to(eq(45))
     end
 
+    it('calculate cost to ship if parcel is over 15lbs') do
+      test_parcel = Parcels.new(2, 3, 4, 20)
+      expect(test_parcel.cost_to_ship()).to(eq(40))
+    end
+    it('calculates cost to ship for volume weight') do
+      test_parcel = Parcels.new(10, 10, 20, 10)
+      expect(test_parcel.cost_to_ship()).to(eq(36))
+    end
+
   end
 end
