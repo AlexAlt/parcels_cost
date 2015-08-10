@@ -1,0 +1,20 @@
+<h1 style="text-align: center; margin-bottom: 50px;">Calculate Parcel Shipping Cost <i class="fa fa-ellipsis-h"></i></h1>
+<form action="/parcels">
+  <div class="form-group">
+    <h5> Enter your parcel dimentions: </h5>
+     <label for="length">Length</label>
+     <input id="length" name="length" class="form-control" type="text">
+     <label for="width">Width</label>
+     <input id="width" name="width" class="form-control" type="text">
+     <label for="height">Height</label>
+     <input id="height" name="height" class="form-control" type="text">
+     <label for="weight">Weight</label>
+     <input id="weight" name="weight" class="form-control" type="text">
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" name="update_params[]" value="next_day_delivery"> Next Day Delivery?
+    </label>
+  </div>
+  <button type="submit" class="btn-default">Submit</button>
+</form>

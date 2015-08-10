@@ -48,8 +48,8 @@ class Parcels
   end
 
   define_method(:next_day_delivery) do
-    next_day = self.cost_to_ship().*(1.5)
-    next_day
+    next_day_total = self.cost_to_ship().*(1.5)
+    next_day_total
   end
 
 end
