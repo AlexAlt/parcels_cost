@@ -3,7 +3,7 @@
 <h5> Height: <%= @height %></h5>
 <h5> Weight: <%= @weight %></h5>
 
-<% if @next_day_checked = 'nexy_day_delivery' %>
+<% if @next_day_checked == 'next_day_delivery' %>
   <h5>Your shipping cost is: $ <%= @next_day_delivery %></h5>
 <% else %>
   <h5>Your shipping cost is: $ <%= @standard_shipping %></h5>
